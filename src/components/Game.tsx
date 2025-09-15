@@ -1,3 +1,4 @@
+import "./Game.css";
 import { useState } from "react";
 import { Board } from "./Board";
 
@@ -18,25 +19,36 @@ export const Game = () => {
   }
 
   const moves = history.map((squares, move) => {
-    let description;
-    if (move > 0) {
-      description = "Go to move #" + move;
-    } else {
-      description = "Go to game start";
+    const description = "Go To Move " + move;
+
+    if(move <= 0) {
+        return null;
     }
     return (
-      <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
-      </li>
+        <li key={move}>
+            <button onClick={() => jumpTo(move)}>{description}</button>
+        </li>
     );
+
   });
+
+  function restartGame() {
+    setHistory([Array(9).fill(null)]);
+    setCurrentMove(0);
+  }
+
   return (
     <div className="game">
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
+        <p>Move History</p>
         <ol>{moves}</ol>
+
+        <div className="restart-button">
+          <button onClick={() => restartGame()}>Restart Game</button>
+        </div>
       </div>
     </div>
   );
