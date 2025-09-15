@@ -1,10 +1,10 @@
 import { Square } from "./Square";
-import { calculateWinner } from "../lib/caculateWinner";
+import { calculateWinner } from "../../lib/caculateWinner";
 
 interface BoardProps {
   xIsNext: boolean;
-  squares: string[];
-  onPlay: (i: string[]) => void;
+  squares: ( string | null )[];
+  onPlay: (nextSquares: (string | null)[]) => void;
 }
 
 export const Board = ({ xIsNext, squares, onPlay }: BoardProps) => {
@@ -28,7 +28,6 @@ export const Board = ({ xIsNext, squares, onPlay }: BoardProps) => {
   } else {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
-
 
   return (
     <>
