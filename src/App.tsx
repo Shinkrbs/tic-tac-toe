@@ -1,10 +1,13 @@
 import { Game } from "./components/Game"
+import './App.css'
 
 function App() {
   return (
     <>
-      <div>
-        <Game />
+      <div className="board-container">
+        <div className="board-wrapper">
+          <Game />
+        </div>
       </div>
     </>
   )
