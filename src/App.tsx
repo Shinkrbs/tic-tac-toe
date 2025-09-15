@@ -1,8 +1,10 @@
+import { Board } from './components/Board';
+
 function App() {
   return (
     <>
       <div>
-        <h1>Hello World!</h1>
+        <Board xIsNext={true} squares={Array(9).fill(null)} onPlay={() => {}} />
       </div>
     </>
   )
