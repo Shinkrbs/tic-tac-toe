@@ -1,10 +1,9 @@
-import { Board } from './components/Board';
-
+import { Game } from "./components/Game"
 function App() {
   return (
     <>
       <div>
-        <Board xIsNext={true} squares={Array(9).fill(null)} onPlay={() => {}} />
+        <Game />
       </div>
     </>
   )
