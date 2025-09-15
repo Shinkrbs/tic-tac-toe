@@ -1,0 +1,69 @@
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px; /* Space between the board and the move list */
+  padding: 20px;
+}
+
+.gameInfo {
+  padding-left: 20px;
+}
+
+.gameInfo ol {
+  padding-left: 20px;
+}
+
+.gameInfo li {
+  margin-bottom: 8px;
+}
+
+.moveButton {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 15px;
+  width: 150px; 
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.moveButton:hover {
+  background-color: #e7e7e7;
+  border-color: #999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.currentMoveText {
+  font-weight: bold;
+  color: #333;
+}
+
+.restart-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+    border-color: transparent;
+    background-color: #c4c3e3;
+    color: #504e76;
+    margin-bottom: 0;
+}
+
+p {
+    color:#504e76;
+    font-weight: bold;
+}
+
+ol {
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+button:hover {
+    background-color: #fdf8e2;
+}
