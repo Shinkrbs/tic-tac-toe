@@ -1,4 +1,5 @@
 import { Square } from "./Square";
+import { calculateWinner } from "../lib/caculateWinner";
 
 interface BoardProps {
   xIsNext: boolean;
