@@ -1,3 +1,4 @@
+import "./Game.css";
 import { useState } from "react";
 import { Board } from "./Board";
 
@@ -30,6 +31,12 @@ export const Game = () => {
       </li>
     );
   });
+
+  function restartGame() {
+    setHistory([Array(9).fill(null)]);
+    setCurrentMove(0);
+  }
+  
   return (
     <div className="game">
       <div className="game-board">
@@ -37,6 +44,10 @@ export const Game = () => {
       </div>
       <div className="game-info">
         <ol>{moves}</ol>
+
+        <div className="restart-button">
+          <button onClick={() => restartGame()}>Restart Game</button>
+        </div>
       </div>
     </div>
   );
