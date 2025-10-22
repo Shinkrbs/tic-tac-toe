@@ -18,18 +18,17 @@ export const Game = () => {
     setCurrentMove(nextMove);
   }
 
-  const moves = history.map((squares, move) => {
+  const moves = history.map((_, move) => {
     const description = "Go To Move " + move;
 
-    if(move <= 0) {
-        return null;
+    if (move <= 0) {
+      return null;
     }
     return (
-        <li key={move}>
-            <button onClick={() => jumpTo(move)}>{description}</button>
-        </li>
+      <li key={move}>
+        <button onClick={() => jumpTo(move)}>{description}</button>
+      </li>
     );
-
   });
 
   function restartGame() {
